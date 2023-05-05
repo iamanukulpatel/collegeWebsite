@@ -1,0 +1,233 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="container-fluid">
+      <img class="logo" src="/assets/logo.png" alt="" srcset="" />
+      <div class="content">
+        <h2><strong>राजेन्द्र आयुर्विज्ञान संस्थान,रांची</strong></h2>
+        <p class="intro">
+          <strong style="color: red"
+            >Rajendra Institute of Medical Sciences
+          </strong>
+          <br />
+          An Autonomous Institute under the Govt. of Jharkhand <br />
+          Ranchi, Jharkhand
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div>
+      <img class="qrCode" src="/assets/qr.jpeg" alt="" srcset="" />
+    </div>
+    <div class="contactUs">
+      <i class="bii bi bi-telephone-outbound-fill"></i> Mobile:
+      <a class="contactData" href="tel:8501903007"> 0651-2776000</a>
+      <br />
+      <i class="bii bi bi-envelope-fill"></i> Email:
+      <a class="contactData" href="mailto:example@example.com">
+        mail@rimsranchi.ac.in</a
+      >
+      <br />
+      <i class="bii bi bi-inboxes-fill"></i> Fax:
+      <span class="contactData">+91-651-2540629</span>
+
+      <br />
+    </div>
+  </div>
+</div>
+
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary"
+  [ngClass]="{ 'fixed-navbar': isNavbarFixed }"
+>
+  <div class="container-fluid justify-content-center">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse text-center"
+      id="navbarSupportedContent"
+    >
+      <!-- Added text-center class -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+        <!-- Added justify-content-center class -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">
+            <i class="bi bi-house-door-fill"></i>Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link active dropdown-toggle"
+            routerLink="/"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Academics
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/">Infrastructure</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/">Societies & Club</a>
+            </li>
+            <li><a class="dropdown-item" routerLink="/">Library</a></li>
+            <li><a class="dropdown-item" routerLink="/">Alumni</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Specialites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Patient</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Info Desk</a>
+        </li>
+        <li class="nav-item">
+          <!-- Button trigger modal -->
+          <button
+            style="color: white; font-family: 'Times New Roman', Times, serif"
+            type="button"
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Admin/Login
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade transparent-modal"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1
+                    style="font-family: cursive; color: orange"
+                    class="modal-title fs-5"
+                    id="exampleModalLabel"
+                  >
+                    Welcome To RIMS
+                  </h1>
+                  <button
+                    style="color: red"
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="loginbox">
+                    <p>Admin Login</p>
+                    <hr />
+
+                    <form class="formdata">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">
+                          <i
+                            class="bi bi-envelope-fill fa-6x text-secondary"
+                          ></i>
+                        </span>
+                        <div class="form-floating">
+                          <input
+                            autocomplete="off"
+                            name="email"
+                            type="email"
+                            class="form-control"
+                            id="emailInputGroup1"
+                            placeholder="Username"
+                          />
+                          <label for="emailInputGroup1">Username</label>
+                        </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">
+                          <i class="bi bi-key-fill fa-6x text-secondary"></i>
+                        </span>
+                        <div class="form-floating">
+                          <input
+                            autocomplete="off"
+                            name="password"
+                            [type]="password"
+                            class="form-control"
+                            id="floatingInputGroup1"
+                            placeholder="Password"
+                          />
+                          <label for="floatingInputGroup1">Password</label>
+                        </div>
+                        <button type="button" class="eye" (click)="toggle()">
+                          <i
+                            class="bi bi-eye-fill"
+                            aria-hidden="true"
+                            *ngIf="!show"
+                          ></i>
+                          <i
+                            class="bi bi-eye-slash-fill"
+                            aria-hidden="true"
+                            *ngIf="show"
+                          ></i>
+                        </button>
+                      </div>
+
+                      <button type="submit" class="btn btn-warning loginbtn">
+                        Login <i class="bi bi-arrow-bar-right"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="twitter-logo-container">
+  <a href="https://twitter.com/ranchi_rims" target="_blank" class="social-icon">
+    <i class="bi bi-twitter"></i>
+  </a>
+
+  <br />
+
+  <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+    <i class="bi bi-facebook"></i>
+  </a>
+
+  <br />
+
+  <a href="https://www.whatsapp.com/" target="_blank" class="social-icon">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <br />
+
+  <a
+    href="https://www.linkedin.com/uas/login-submit"
+    target="_blank"
+    class="social-icon"
+  >
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>

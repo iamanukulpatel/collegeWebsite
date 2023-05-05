@@ -1,0 +1,48 @@
+.socialMedia {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+}
+.bi {
+  color: green;
+}
+
+.bi-facebook {
+  color: blue;
+}
+
+.bi-instagram {
+  color: red;
+}
+
+.bi-twitter {
+  color: rgb(0, 132, 255);
+}
+
+/* scroll animation */
+
+.container {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+
+.visible {
+  opacity: 1;
+  animation: fadeIn 5s ease-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

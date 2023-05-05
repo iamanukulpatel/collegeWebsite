@@ -1,0 +1,63 @@
+.overflow {
+  position: relative;
+  overflow: hidden;
+}
+.zoom img {
+  transition: all 0.2s linear;
+}
+.zoom:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.gallery {
+  background-color: #f1f1f1;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery {
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+/* animation */
+
+.container {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+
+.visible {
+  opacity: 1;
+  animation: fadeIn 3s ease-in-out;
+}
+.imageBelow {
+  margin-top: 50px;
+}
+.imageBelow2 {
+  margin-top: 10px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}

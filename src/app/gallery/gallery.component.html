@@ -1,0 +1,56 @@
+<div class="container gallery" [ngClass]="animationState">
+  <!--Start code-->
+  <div class="row">
+    <!--SECTION START-->
+    <section class="row">
+      <!--Start slider news-->
+      <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+        <div id="featured" class="carousel slide carousel" data-ride="carousel">
+          <!--carousel inner-->
+          <div class="carousel-inner">
+            <!--Item slider-->
+            <div class="carousel-item active">
+              <div class="card border-0 rounded-0 text-light overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  <div class="ratio_left-cover-1 image-wrapper">
+                    <img
+                      class="img-fluid w-100"
+                      src="/assets/homeCard1/galery/whd_23_1_a.jpeg"
+                      alt="Bootstrap news template"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h2 class="imageBelow">
+                GRADE Conference and Workshop (16-18th December 2022)
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Start box news-->
+      <div class="col-12 col-md-6 pt-1 pl-md-1 mb-1 mb-lg-1">
+        <div class="row">
+          <div class="col-6 pb-1 pt-0 pr-1" *ngFor="let g of images">
+            <div class="card border-0 rounded-0 text-white overflow zoom">
+              <div class="position-relative">
+                <div class="ratio_right-cover-2 image-wrapper">
+                  <img
+                    class="img-fluid"
+                    [src]="g.url"
+                    width="100%"
+                    alt="simple blog template bootstrap"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="imageBelow2">{{ g.caption }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<hr />

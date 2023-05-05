@@ -1,0 +1,167 @@
+.carousel-item {
+  overflow: hidden; /* Hide any overflow */
+}
+
+.carousel-item img {
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 100%; /* Adjust the width based on the number of slides */
+  animation: slide 30s infinite linear; /* Adjust the animation duration as needed */
+  touch-action: pan-y;
+}
+
+.slide {
+  flex: 1 0 33.33%; /* Adjust the flex property based on the number of slides */
+  padding: 10px;
+}
+
+.slidePara {
+  text-align: right; /* Align the paragraph text to the right */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflow */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(80%); /* Start from the right end */
+  }
+  50% {
+    transform: translateX(0%); /* Slide towards the left */
+  }
+  100% {
+    transform: translateX(-80%); /* Move completely to the left */
+  }
+}
+
+/* Add touch controls */
+.slider-container:hover .slider {
+  animation-play-state: paused;
+}
+
+.slider-container:active .slider {
+  animation-play-state: running;
+}
+
+.slidePara {
+  color: green;
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.carousel-inner .carousel-item {
+  position: relative;
+}
+
+.carousel {
+  box-shadow: 0 4px 10px red;
+}
+
+.carousel-item {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 550px;
+  animation: scaleAnimation 6s infinite alternate;
+}
+
+.carousel-item img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scaleAnimation {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.box {
+  font-family: "Times New Roman", Times, serif;
+
+  height: 100%;
+  text-align: left;
+  margin-left: 0;
+}
+
+.btn-secondary {
+  text-align: left;
+}
+.box-heading p {
+  color: white;
+  margin-left: 10px;
+}
+.box-heading {
+  text-align: center;
+  box-shadow: 1px 2px 6px red;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(78, 75, 75);
+}
+
+/* scorlling upwords */
+.notice-container {
+  max-height: 510px; /* Set a maximum height for the container */
+  overflow-y: auto; /* Enable vertical scrolling when necessary */
+}
+
+.notice-list {
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  animation: scroll-up 20s linear infinite; /* Add animation */
+}
+.notice-list:hover {
+  animation: none; /* Remove the animation on hover */
+}
+
+.notice-list li {
+  list-style: disc; /* Add bullet points (dots) for list items */
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.allList {
+  color: black;
+  text-decoration: none;
+}
+.allList:hover {
+  text-decoration: underline;
+}
+
+.latestNews span {
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+.about {
+  font-size: small;
+  text-align: justify;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.aboutSection {
+  background-color: azure;
+}
+
+.nitice {
+  padding: 10px;
+}
+.nitice:hover {
+  color: aquamarine;
+}

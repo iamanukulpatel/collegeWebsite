@@ -1,0 +1,54 @@
+<br />
+<div class="container text-center imagesButton">
+  <div class="row">
+    <div class="col-sm-3 colAnimation" *ngFor="let a of img">
+      <div class="image-container img-wrapper">
+        <img [src]="a.image" alt="" />
+        <p class="aboutPhotoButton1">{{ a.about | slice : 0 : 20 }}...</p>
+        <p class="aboutPhotoButton">{{ a.about }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center">
+  <hr />
+
+  <button class="btn full-width">Gallery</button>
+
+  <br />
+
+  <app-gallery></app-gallery>
+
+  <app-social-media></app-social-media>
+
+  <hr />
+
+  <div class="container footerabove text-center">
+    <div class="row">
+      <div class="col">
+        <iframe
+          class="iframee"
+          width="340"
+          height="350"
+          src="https://7ed2d54a.sibforms.com/serve/MUIEAAjSA4veW0YP3rllc0s-nbP0-OZyUAzk3G99jTOdbIlNdisRF5lrtdztqt4G0zlCWJO7T6W75t5fAn77Il3_pNbUoAmTVjaCeveV_OFPIFI0Ss9LFkO8r3RwlmyTMdunQ6sUFqK2mCFehUzGs0sfrNhJV-j873HxynGMIHD69DnlMNSsOVDKdyyt7g3ni4G7zycc0DGdi6ig"
+          frameborder="0"
+          scrolling="off"
+        >
+        </iframe>
+      </div>
+
+      <div class="col vl">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9090968590663!2d85.34626501497459!3d23.391505584767508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e15bbde0ba37%3A0xd4a5bc005c22eb0d!2sRajendra%20Institute%20of%20Medical%20Sciences!5e0!3m2!1sen!2sin!4v1683026596819!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

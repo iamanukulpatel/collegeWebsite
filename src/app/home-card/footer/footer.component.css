@@ -1,0 +1,36 @@
+.justify-content-center {
+  margin-top: 5px;
+  background-color: rgb(34, 29, 29);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(149, 143, 143);
+  text-align: center;
+  padding: 0.5%;
+}
+
+p {
+  font-size: small;
+  margin-top: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: white;
+}
+.footerContent {
+  text-align: left;
+}
+
+.footerContent p {
+  cursor: pointer;
+}
+
+.footerContent h4 {
+  color: rgb(174, 46, 46);
+}
+
+.footerContent p:hover {
+  color: red;
+}

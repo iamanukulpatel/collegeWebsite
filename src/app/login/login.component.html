@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-8">
+      <img class="loginImage img-fluid" src="/assets/login.avif" alt="" />
+    </div>
+
+    <div class="col-sm-4 loginbox">
+      <p>Admin Login</p>
+      <hr />
+
+      <form class="formdata">
+        <div class="input-group mb-3">
+          <span class="input-group-text">
+            <i class="bi bi-envelope-fill fa-6x text-secondary"></i>
+          </span>
+          <div class="form-floating">
+            <input
+              autocomplete="off"
+              name="email"
+              type="email"
+              class="form-control"
+              id="emailInputGroup1"
+              placeholder="Username"
+            />
+            <label for="emailInputGroup1">Username</label>
+          </div>
+        </div>
+        <div class="input-group mb-3 passwordField">
+          <span class="input-group-text">
+            <i class="bi bi-key-fill fa-6x text-secondary"></i>
+          </span>
+          <div class="form-floating">
+            <input
+              autocomplete="off"
+              name="password"
+              [type]="password"
+              class="form-control"
+              id="floatingInputGroup1"
+              placeholder="Password"
+            />
+            <label for="floatingInputGroup1">Password</label>
+          </div>
+          <button type="button" class="eye" (click)="toggle()">
+            <i class="bi bi-eye-fill" aria-hidden="true" *ngIf="!show"></i>
+            <i class="bi bi-eye-slash-fill" aria-hidden="true" *ngIf="show"></i>
+          </button>
+        </div>
+
+        <button type="submit" class="btn btn-warning loginbtn">
+          Login <i class="bi bi-arrow-bar-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
