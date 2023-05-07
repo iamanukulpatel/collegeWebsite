@@ -165,3 +165,27 @@
 .nitice:hover {
   color: aquamarine;
 }
+
+.directorDesk {
+  text-align: justify;
+}
+
+/* Director Desk */
+
+.angle {
+  position: relative;
+  background-color: #b1eeb3; /* Replace with your desired color */
+  padding: 20px;
+  color: #1e1d1d; /* Text color */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.angle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid #4caf50; /* Same color as background */
+}

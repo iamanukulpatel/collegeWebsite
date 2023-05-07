@@ -29,7 +29,7 @@
 
 .visible {
   opacity: 1;
-  animation: fadeIn 5s ease-out;
+  animation: fadeIn 4s ease-out;
 }
 
 .hidden {
